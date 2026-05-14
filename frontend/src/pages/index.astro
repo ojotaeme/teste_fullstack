@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthForm from '../components/AuthForm.jsx';
+---
+
+<Layout title="Login - Todo App">
+	<main class="min-h-screen flex items-center justify-center p-4">
+        <!-- client:load faz com que o Astro hidrate o componente React imediatamente -->
+		<AuthForm client:load />
+	</main>
+</Layout>
+
+<script>
+    // Se já estiver logado, joga pro dashboard
+    if (localStorage.getItem('token')) {
+        window.location.href = '/dashboard';
+    }
+</script>

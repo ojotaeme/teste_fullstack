@@ -1,0 +1,9 @@
+# IDEs e Editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# SO (Mac/Windows)
+.DS_Store
+Thumbs.db
